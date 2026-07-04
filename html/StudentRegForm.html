@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Student Registration Form</h1>
+        <p>Please fill in the details</p>
+        <hr>
+    </header>
+    <main>
+        <form action="">
+                <section>
+                    <h2>1. Personal Information</h2>
+                    <label for="">Full Name:*</label>
+                    <input type="text" placeholder="Enter your Full Name" required>
+                    <label for="">Father's Name:*</label>
+                    <input type="text" placeholder="Enter your Father's Name" required>
+                    <label for="">Mother's Name:*</label>
+                    <input type="text" placeholder="Enter your Mother's Name" required>
+                    <label for="">Date of Birth:*</label>
+                    <input type="date" placeholder="dd-mm-yyyy" required>
+                    <label for="">Gender:*</label>
+                    <input type="radio" name="gender" required>Male
+                    <input type="radio" name="gender" required>Female
+                    <input type="radio" name="gender" required>Other
+                    <label for="">Nationality:*</label>
+                    <select name="" id="" required>
+                        <option value="" hidden>Nationality</option>
+                        <option value="">Indian</option>
+                        <option value="">British</option>
+                        <option value="">French</option>
+                        <option value="">Dutch</option>
+                        <option value="">American</option>
+                        <option value="">Mexican</option>
+                    </select>
+                    <label for="">Email Address:*</label>
+                    <input type="email" placeholder="Enter your email address" required>
+                    <label for="">Aadhar Number:*</label>
+                    <input type="number" placeholder="Enter your Aadhar Number" required>
+                    <label for="">Mobile Number:*</label>
+                    <input type="number" placeholder="Enter your Mobile Number" required>
+                    <label for="">Alternate Mobile Number:</label>
+                    <input type="number" placeholder="Enter your Alternate Mobile Number">
+                </section>
+                <hr>
+
+                <section>
+                    <h2>2. Academic Information</h2>
+                    <label for="">Course:*</label>
+                    <select name="" id="" required>
+                        <option value="" hidden>Select Course</option>
+                        <option value="">B.Tech</option>
+                        <option value="">M.Tech</option>
+                        <option value="">BCA</option>
+                        <option value="">MCA</option>
+                    </select>
+
+                    <label for="">Qualification:*</label>
+                    <select name="" id="" required>
+                        <option value="" hidden>Select Qualification</option>
+                        <option value="">Graduate</option>
+                        <option value="">Intermediate</option>
+                    </select>
+
+                    <label for="">Passing Year:*</label>
+                    <select name="" id="" required>
+                        <option value="" hidden>Select Year</option>
+                        <option value="">2026</option>
+                        <option value="">2027</option>
+                        <option value="">2028</option>
+                        <option value="">2029</option>
+                    </select>
+                    <label for="">College/School Name:*</label>
+                    <input type="text" placeholder="Enter your College/School Name" required>
+                    <label for="">Percentage/CGPA:*</label>
+                    <input type="number" placeholder="Enter your Percentage/CGPA" required>
+                </section>
+                <hr>
+
+                <section>
+                    <h2>3. Address Information</h2>
+                    <label for="">Address Line 1:*</label>
+                    <input type="text" placeholder="Enter your Address" required>
+                    <label for="">Address Line 2:</label>
+                    <input type="text" placeholder="Landmark">
+                    <label for="">City:*</label>
+                    <input type="text" placeholder="Enter your City" required>
+                    <label for="">State:*</label>
+                    <select name="" id="" required>
+                        <option value="" hidden>Select State</option>
+                        <option value="">Uttar Pradesh</option>
+                        <option value="">Uttrakhand</option>
+                        <option value="">Delhi</option>
+                        <option value="">Other</option>
+                    </select>
+                    
+                    <label for="">PIN Code:*</label>
+                    <input type="number" placeholder="Enter your PIN Code" required>
+                </section>
+                <hr>
+                <section>
+                    <h2>4. Additional Information</h2>
+                    <label for="">Blood Group</label>
+                    <select name="" id="">
+                        <option value="" hidden>Select you Blood Group</option>
+                        <option value="">A+</option>
+                        <option value="">B+</option>
+                        <option value="">O+</option>
+                        <option value="">AB+</option>
+                        <option value="">A-</option>
+                        <option value="">B-</option>
+                        <option value="">O-</option>
+                        <option value="">AB-</option>
+                    </select>
+                    <label for="">Upload Photograph:*</label>
+                    <input type="file" required>
+                    <label for="">Hobbies:</label>
+                    <input type="checkbox" name="Hobbies">Reading
+                    <input type="checkbox" name="Hobbies">Sports
+                    <input type="checkbox" name="Hobbies">Music
+                    <input type="checkbox" name="Hobbies">Travelling
+                    <input type="checkbox" name="Hobbies">Coding
+                    <input type="checkbox" name="Hobbies">Painting
+                    <input type="checkbox" name="Hobbies">Other
+                    <label for="">Any Previous Experience?:*</label>
+                    <input type="radio" name="exp" required>Yes
+                    <input type="radio" name="exp" required>No
+                    <label for="">Additional Comments:</label>
+                    <input type="text" placeholder="Write your comment...">
+                </section>
+                <hr>
+                <button type="submit">Submit Form</button>
+                <button type="reset">Reset Form</button>
+        </form>
+    </main>
+    <footer>
+        <hr>
+        <p>Note: Fields marked with * are mandatory.</p>
+    </footer>
+</body>
+</html>

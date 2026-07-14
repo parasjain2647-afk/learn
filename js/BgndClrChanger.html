@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #count{
+            height: 110px;
+            font-size: 100px;
+            font-weight: bolder;
+            background-color: rgb(191, 234, 219);
+            text-align: center;
+        }
+        button{
+            height: 25px;
+            width: 100px;
+            border-radius: 5px;
+            outline-color: black;
+        }
+        button:hover{
+            opacity: 0.7;
+        }
+        #red{
+            background-color: red;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="red"></button>
+        <button id="blue"></button>
+        <button id="green"></button>
+    </div>
+
+    <script>
+        let color = "white";
+        const body=document.getElementsByClassName("body");
+        const red= document.querySelector("#red");
+        const blue= document.querySelector("#blue");
+        const green= document.querySelector("#green");
+        const bc=(color)=>{
+            document.body.style.backgroundColor= color;
+        }
+        red.addEventListener("click", ()=>{
+            bc("red");
+        });
+        blue.addEventListener("click", ()=>{
+            bc("blue");
+        });
+        green.addEventListener("click", ()=>{
+            bc("green");
+        });
+    </script>
+</body>
+</html>

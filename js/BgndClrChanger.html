@@ -5,58 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #count{
-            height: 110px;
-            font-size: 100px;
-            font-weight: bolder;
-            background-color: rgb(191, 234, 219);
-            text-align: center;
-        }
-        button{
+        .button{
             height: 25px;
             width: 100px;
             border-radius: 5px;
             outline-color: black;
+            font-size: medium;
+            font-weight: 100;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 5px;
         }
-        button:hover{
+        .button:hover{
             opacity: 0.7;
-        }
-        #red{
-            background-color: red;
-        }
-        #blue{
-            background-color: blue;
-        }
-        #green{
-            background-color: green;
         }
     </style>
 </head>
 <body>
-    <div>
-        <button id="red"></button>
-        <button id="blue"></button>
-        <button id="green"></button>
-    </div>
-
     <script>
-        let color = "white";
-        const body=document.getElementsByClassName("body");
-        const red= document.querySelector("#red");
-        const blue= document.querySelector("#blue");
-        const green= document.querySelector("#green");
-        const bc=(color)=>{
+        let colors=[
+            "red",
+            "blue",
+            "green",
+            "white",
+            "black",
+            "purple",
+            "pink",
+            "yellow",
+            "orange"
+        ];
+
+        const ip = document.createElement("input");
+        ip.classList.add("input");
+        ip.id = "ip"
+        ip.type = "text"; 
+        ip.placeholder = "Enter any color button...";
+        document.body.append(ip);
+
+        const submit = document.createElement("button");
+        submit.classList.add("submitButton");
+        submit.id = "sub";
+        submit.textContent="Submit";
+        document.body.append(submit);
+
+        const setBackGroundColor=(color)=>
             document.body.style.backgroundColor= color;
+
+        const createElement = (element) => {
+            const button = document.createElement("button");
+            button.classList.add("button");
+            button.id = element;
+            button.addEventListener("click", (event)=>{
+                setBackGroundColor(event.target.id);
+            });
+            document.body.append(button);
+            button.textContent= element.toUpperCase();
+            button.style.backgroundColor= element;
+            if(element ==="black" || element === "purple"){
+                button.style.color = "white";
+            }
+            else{
+                button.style.color = "black";
+            }
         }
-        red.addEventListener("click", ()=>{
-            bc("red");
+
+        colors.forEach(element => {
+            createElement(element);
         });
-        blue.addEventListener("click", ()=>{
-            bc("blue");
+
+        submit.addEventListener("click", () => {
+            createElement(ip.value);
         });
-        green.addEventListener("click", ()=>{
-            bc("green");
-        });
+
     </script>
 </body>
 </html>
